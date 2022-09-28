@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Test</title>
+
+	<link data-require="bootstrap-css@3.0.1" data-semver="3.0.1" rel="stylesheet" href="bootstrap/css/bootstrap.min.css"  media="all" />
+	<link data-require="bootstrap-css@3.0.1" data-semver="3.0.1" rel="stylesheet" href="css/bootstrap-responsive.min.css"  media="all" />
+	<link rel="stylesheet" href="css/create.css"  media="all" />
+	
+</head>
+<body ng-app="confirmation" ng-controller="confirmationController">
+
+	<div class="container">
+	
+		<div class="row form-horizontal"><br>
+		
+			<div class="col-md-7 col-md-offset-3 boundary">
+			
+			<!-- FORM : YOU CAN DISABLE, HTML5 VALIDATION BY USING "novalidate" ATTRIBUTE-->
+			<form class="form-horizontal" role="form" name="users" action="" ng-submit="" novalidate>
+			
+			<!-- PAGE HEADER -->
+			<div id="header" class="page-header">
+			    <h4><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;User's Confirmation</h4>
+			</div>
+			<br>
+			
+			<div class="line col-md-6">
+				<!-- FIRST NAME -->
+			    <div class="form-group form-group-sm" ng-class="{ 'has-error' : userForm.fname.$invalid && (userForm.fname.$dirty || submitted)}">
+			         <div class="col-sm-12">
+				         <label class="" for="firstName">First Name : &nbsp;</label>
+				         <input type="text" name="fname" class="form-control input-sm" id="fname" ng-model="fname" readonly />
+			         </div>
+			    </div>
+			    
+			    <!-- LAST NAME -->
+			    <div class="form-group form-group-sm" ng-class="{ 'has-error' : userForm.lname.$invalid && (userForm.lname.$dirty || submitted)}">
+				     <div class="col-sm-12">
+					     <label class="" for="lastName">Last Name : &nbsp;</label>
+					     <input type="text" name="lname" class="form-control input-sm" id="lname" ng-model="lname" readonly />
+				     </div>
+				</div>
+				
+				<!-- GENDER -->
+				<div class="form-group form-group-sm" ng-class="{ 'has-error' : userForm.gender.$invalid && (userForm.gender.$dirty || submitted)}">
+			       <div class="col-sm-12">
+				        <label class="" for="gender">Gender :</label>
+				        <input type="text" name="gender" class="form-control input-sm" id="gender" ng-model="gender" readonly />
+			       </div>
+		        </div>
+			    
+			     <!-- CONTACT NO -->
+			    <div class="form-group form-group-sm" ng-class="{ 'has-error' : userForm.contactno.$invalid  && (userForm.contactno.$dirty || submitted) }">
+		          <div class="col-sm-12">
+			          <label class="" for="contactno">Contact No :</label>
+			          <input type="text" name="contactno" class="form-control input-sm" id="contactno" ng-model="contactno" readonly />
+		          </div>
+		        </div>
+		        
+		        <!-- DATE OF BIRTH -->
+		        <div class="form-group form-group-sm" ng-class="{ 'has-error' : userForm.date.$invalid  && (userForm.date.$dirty || submitted)}">
+		          <div class="col-sm-12">
+		          		<label for="dob" class="">Date Of Birth :</label>
+		          		<input type="date" class="form-control input-sm" name="date" id="date" ui-date ng-model="date" readonly />
+		            </div>
+		        </div>
+		        
+		        <!-- Address -->
+		        <div class="form-group form-group-md" ng-class="{ 'has-error' : userForm.address.$invalid && (userForm.address.$dirty || submitted)}">
+		          <div class="col-sm-12">
+			          	<label class="" for="Address">Address :</label>
+			          	<textarea rows="2" cols="40" class="form-control" name="address" ng-model="address" readonly ></textarea>
+		          </div>
+		        </div>
+		        
+			</div>
+			
+			<div class="divstyle col-md-6">
+				<!-- E-MAIL -->
+				<div class="form-group form-group-sm" ng-class="{ 'has-error' : userForm.email.$invalid && (userForm.email.$dirty || submitted)}">
+		          	<div class="col-sm-12">
+			          	<label class="" for="email">Email :</label>
+			          	<input type="email" name="email" class="form-control input-sm" ng-model="email" id="email" readonly />
+		          	</div>
+		        </div>
+				
+				<!-- USERNAME -->
+				<div class="form-group form-group-sm" " ng-class="{ 'has-error' : userForm.username.$invalid && (userForm.username.$dirty || submitted)}">
+		           <div class="col-sm-12">
+		          	   <label class="" for="username">Username :</label>
+		          	   <input type="text" name="username" class="form-control" ng-model="username" readonly />
+		           </div>
+		        </div>
+		        
+		        <!-- USER TYPE -->
+		        <div class="form-group form-group-sm" ng-class="{ 'has-error' : userForm.usertype.$invalid  && (userForm.usertype.$dirty || submitted)}">
+				  <div class="col-sm-12">
+				  	  <label class="" for="userType">User Type :</label>
+				  	  <input type="text" name="usertype" class="form-control input-sm" id="usertype" ng-model="usertype" readonly />
+				  </div>
+				</div>
+				
+				<!-- DATE OF Joining -->
+				<div class="form-group form-group-sm"  ng-class="{ 'has-error' : userForm.jdate.$invalid  && (userForm.jdate.$dirty || submitted)}">
+		          <div class="col-sm-12">
+		             <label for="dob" class="">Date Of Joining :</label>
+			         <input type="text" class="form-control input-sm" name="jdate" id="date" ng-model="date" readonly />
+	               </div>
+		        </div>
+		        
+		        <div class="form-group form-group-sm" ng-class="{ 'has-error' : userForm.password.$invalid && (userForm.password.$dirty || submitted)}">
+			        <!-- PASSWORD -->
+			        <div class="col-sm-12">  
+				       <label class="" for="password">Password :</label>
+				       <input type="Password" name="password" class="form-control" ng-model="password" readonly />
+			      	</div>
+			    </div>
+		        
+				<!-- Correction Comments -->
+				<div class="form-group form-group-md" ng-class="{ 'has-error' : users.comments.$invalid && (users.comments.$dirty || submitted)}">
+		          <div class="col-md-12">
+		          	<label class="" for="Comments">Correction Comments :</label>
+		          	<span ng-show="users.comments.$error.required && (users.comments.$dirty || submitted)" class="label label-danger">Required.</span>
+		          	<textarea rows="2" cols="40" class="form-control" name="comments" ng-model="comments" placeholder="Your Comments" ng-required="true" autofocus></textarea>
+	            </div>
+		        </div>
+			</div>
+			
+			<!-- FROM SUBMISSION -->
+	        <div class="form-group form-group-sm">
+	          <div class="col-sm-offset-4 col-sm-5">
+	            <button ng-click="confirm()" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-ok-sign"></span>&nbsp;&nbsp;Confirm</button>
+	            
+	            <button type="submit" ng-click="submitForm()" class="btn btn-primary btn-sm" ng-disabled="users.$invalid"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Send For Correction</button>
+	          </div>
+	        </div>
+			</form>
+			
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/angular.min.js"></script>
+    <script src="js/confirmation.js"></script>
+     
+</body>
+</html>
